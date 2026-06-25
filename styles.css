@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Titan+One&display=swap');
+
+:root {
+  --sectioncolor: rgb(252, 252, 243);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*---- Reset, Color and Margins ----*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #faf3f3;
+  font-family: "Elms Sans", sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  font-family: "Elms Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-family: "Elms Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+}
+
+/*---- Navigaton Styling ----*/
+.nav-header {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: var(--sectioncolor);
+  padding: 2px 10px;
+  margin: auto;
+}
+
+.nav-header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin: 5px 20px;
+}
+
+.nav-header ul li:first-child {
+  margin-right: auto;
+  font-size: large;
+  font-weight: bolder;
+}
+.nav-header ul li:nth-child(2) {
+  display: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+nav ul li{
+  display: flex;
+  list-style: none;
+}
+
+nav ul li:hover {
+  transform: scale(1.1);
+}
+
+nav img {
+    width: 100%;
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+/*---- About Me Section Styling ----*/
+.about img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5%;
+}
+
+.about {
+  display: flex;
+  margin-top: 1em;
+  background-color: var(--sectioncolor);
+  gap: 6em;
+  padding: 2em 4em;
+  border-radius: 5px;
+}
+
+.about-box {
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  
+  margin-top: 2em;
+}
+
+.buttons {
+ display: inline-flex;
+ flex-shrink: 1;
+ min-width: 0;
+}
+
+.btn {
+  flex: 1 1 180px;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin: 2em 2em 1em 0em;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px;
+  white-space: nowrap;
+  font-size: clamp(10px, 1vw, 16px);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.btn:active {
+  transform: scale(1.1);
+  background-color: rgb(180, 180, 174);
+}
+
+/*---- GALLERY Section Styling ----*/
+.gallery {
+  padding: 2em;
+}
+
+.gallery-box {
+     display: grid;
+     width: 100%;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: 1fr 1fr;
+     grid-template-areas: "img-1 img-2 img-3" "img-4 img-6 img-5";
+     gap: 4em;
+}
+ 
+.gallery-box img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.gallery-box img:hover {
+  scale: 1.1;
+  transition: 0.8s;
+}
+
+#see-gal {
+  display: none;
+  width: 100%;
+  max-width: 25px;
+}
+
+#close-top {
+  display: none;
+  width: 100%;
+  max-width: 25px;
+}
+
+#close-bottom-gal {
+  display: none;
+  margin: auto;
+  width: 25px;
+}
+
+/*---- PUBLICATION Section Styling ----*/
+.publications {
+  background-color: var(--sectioncolor);
+  padding: 2em;
+  margin-top: 1em;
+  border-radius: 5px;
+}
+
+.publications h1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+#see-pub {
+  display: none;
+  width: 100%;
+  max-width: 25px;
+}
+
+#close-top {
+  display: none;
+  width: 100%;
+  max-width: 25px;
+}
+
+#close-bottom-pub {
+  display: none;
+  margin: auto;
+  width: 25px;
+}
+
+.pub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 2em;
+}
+
+.pub-grid p {
+  margin: 0px;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.pub-grid p:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/*---- PRESENTATION Section Styling ----*/
+.presentations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  padding: 2em 2em;
+  flex-wrap: wrap;
+}
+
+.presentations img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+}
+
+.presentations-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  margin: 2em 2em;
+
+  font-size: clamp(14px, 1vw, 18px);
+  line-height: 1.6;
+}
+
+/*---- EDUCATION Section Styling ----*/
+.education {
+  background-color: var(--sectioncolor);
+  border-radius: 5px;
+  
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+.title {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.unisa {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.knust {
+  grid-column: 2;
+  grid-row: 1/3;
+  margin-top: 2em;
+}
+
+.school-box img {
+  width: 100%;
+  max-width: 350px;
+   
+}
+
+.school-box {
+  border: 1px solid #000000;
+  background-color: #ffffff;
+
+  padding: 2em;
+}
+
+.school-box.title{
+  border: 1px solid #000000;
+  background-color: #572f2f11;
+
+  padding: 2em;
+}
+
+.knust:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+.unisa:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+/*----FOOTER Styling ----*/
+footer {
+  background-color: #000000;
+  margin: 0;
+  padding: 2em;
+}
+
+footer h1, footer p {
+  color: #ffffff;
+}
+
+.contact-text p {
+  font-size: larger;
+}
+
+.contact-text p a {
+  color: beige;
+  text-decoration: none;
+}
+
+.contact-text p a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.nav-footer a {
+  display: block;
+  color: beige;
+  margin-right: 1.5em;
+  text-decoration: none;
+  padding-top: 15px;
+  font-family: "Elms Sans", sans-serif;
+}
+
+.nav-footer a:hover {
+  text-decoration: underline;
+}
+
+.nav-footer-apps ul {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 2em;
+  margin: 5px 0px;
+  background-color: #000000;
+}
+
+.signoff {
+  display: flex;
+ padding-top: 2em;
+  justify-content: center;
+}
+
+
+/*---- Viewport for tablets ----*/
+@media (max-width: 770px){
+  /*---- About Me Section ON Tablet Styling ----*/
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding-bottom: 0;
+  }
+}
+
+
+/*---- Viewport for Mobiles ----*/
+@media (max-width: 425px) {
+  /*---- Navigation Section on Mobile Styling ----*/
+  .nav-header ul li:nth-child(3),
+  .nav-header ul li:nth-child(4),
+  .nav-header ul li:nth-child(5) {
+    display: none;
+  }
+
+ .nav-header ul li:nth-child(2) {
+    display: flex;
+    width: 30px;
+  }
+
+  /*---- About Me Section on Mobile Styling ----*/
+  .about-box {
+    font-size: clamp(13px, 1vw, 14px);
+  }
+
+  .buttons {
+    display: none;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  /*---- Publications Section on Mobile Styling ----*/
+  .publications {
+    background-color: var(--sectioncolor);
+    margin-top: 1em;
+    border-radius: 5px;
+  }
+
+  div#viewButtons-pub, div#viewButtons-gal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  .publications h1, .gallery h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    font-size: clamp(20px, 1.2vw, 30px);
+  }
+
+  .pub-grid {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 2em;
+  }
+
+  /*---- Hide and View buttons on Mobile for Gallery and Publication Styling ----*/
+  #see-pub, #see-gal {
+    display: flex;
+    width: 100%;
+    max-width: 25px;
+  }
+
+  #close-top {
+    display: none;
+    width: 100%;
+    max-width: 25px;
+  }
+
+  #close-bottom-pub, #close-bottom-gal {
+    display: none;
+    margin: auto;
+    width: 25px;
+  }
+
+  /*---- Gallery Section on Mobile Styling ----*/
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-box {
+      display: none;
+      width: 100%;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "img-1"
+        "img-2"
+        "img-3"
+        "img-4"
+        "img-5"
+        "img-6";
+      justify-items: center;
+      gap: 2em;
+  }
+
+  .gallery-box img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 50%;
+}
+
+  /*---- Presentation Section on Mobile Styling ----*/
+  .presentations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .presentations img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /*---- Education Section on Mobile Styling ----*/
+  .education {
+    background-color: var(--sectioncolor);
+    border-radius: 5px;
+    
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+  }
+
+  .school-box {
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    padding: 2em;
+    font-size: clamp(10px, 1.2vw, 15px);
+  }
+
+  /*---- Footer Section on Mobile Styling ----*/
+  footer {
+    background-color: #000000;
+    margin: 0;
+    padding: 2em;
+    font-size: clamp(10px, 1.2vw, 15px);
+  }
+}
