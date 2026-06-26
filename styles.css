@@ -445,10 +445,17 @@ footer h1, footer p {
     max-width: 25px;
   }
 
-  #close-bottom-pub, #close-bottom-gal {
+  #close-bottom-pub {
     display: none;
     margin: auto;
     width: 25px;
+  }
+
+  #close-bottom-gal {
+    display: none;
+    margin: auto;
+    width: 25px;
+    margin-top: 3em;
   }
 
   /*---- Gallery Section on Mobile Styling ----*/
